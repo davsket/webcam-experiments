@@ -1,0 +1,27 @@
+button {
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  margin: 0 0.3rem 1rem;
+  border: 1px solid #666;
+  border-radius: 5px;
+}
+
+[id="clear"] {
+  color: #666;
+  background-color: white;
+}
+
+[id="red"] {
+  color: white;
+  background-color: red;
+}
+
+[id="green"] {
+  color: white;
+  background-color: green;
+}
+
+[id="blue"] {
+  color: white;
+  background-color: blue;
+}
