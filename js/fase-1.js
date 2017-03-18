@@ -1,4 +1,4 @@
-navigator.getUserMedia({video: true}, gotUserMedia, handleError)
+navigator.mediaDevices.getUserMedia({video: true}).then(gotUserMedia, handleError)
 
 function gotUserMedia (camStram) {
   // Handle camera streaming

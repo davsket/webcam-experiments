@@ -11,17 +11,17 @@ button {
   background-color: white;
 }
 
-[id="red"] {
+[id$="red"] {
   color: white;
   background-color: red;
 }
 
-[id="green"] {
-  color: white;
-  background-color: green;
+[id$="yellow"] {
+  color: #333;
+  background-color: yellow;
 }
 
-[id="blue"] {
+[id$="blue"] {
   color: white;
   background-color: blue;
 }

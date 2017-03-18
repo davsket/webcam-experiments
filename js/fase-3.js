@@ -1,4 +1,4 @@
-navigator.getUserMedia({video: true}, gotUserMedia, handleError)
+navigator.mediaDevices.getUserMedia({video: true}).then(gotUserMedia, handleError)
 
 function gotUserMedia (localMediaStream) {
   const video = document.createElement('video')
@@ -12,12 +12,13 @@ function handleError (error) {
   console.error(error)
 }
 
-function onVideoReady () {
+function onVideoReady (e) {
   console.info('Loaded video data')
-  const videoHeight = this.videoHeight
-  const videoWidth = this.videoWidth
+  const video = e.target
+  const videoHeight = video.videoHeight
+  const videoWidth = video.videoWidth
   const canvas = createCanvas(videoWidth, videoHeight)
-  drawVideoOnCanvas(canvas, this)
+  drawVideoOnCanvas(canvas, video)
 }
 
 function createCanvas (width, height) {
