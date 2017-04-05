@@ -69,7 +69,6 @@ function negateBlue (imageData) {
 
 function negateColorInData(imageData, minHue, maxHue, minHue2, maxHue2) {
   let data = imageData.data
-  let j = 0
   for (let i = 0; i < data.length; i += 4) {
     let hslColor = rgbToHsl(data[i], data[i + 1], data[i + 2])
     const hue = hslColor[0] * 360
@@ -78,9 +77,6 @@ function negateColorInData(imageData, minHue, maxHue, minHue2, maxHue2) {
     if (colorMatchRange || colorMatchSecRange) {
       hslColor[1] = 0
       let newRGBColor = hslToRgb(hslColor[0], hslColor[1], hslColor[2])
-      if (!j) {
-        j++
-      }
       data[i] = newRGBColor[0]
       data[i + 1] = newRGBColor[1]
       data[i + 2] = newRGBColor[2]
